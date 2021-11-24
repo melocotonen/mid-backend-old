@@ -7,6 +7,6 @@ class HelloWorld extends Controller
 {
     public function __invoke()
     {
-        return reponse()->json('Hello World');
+        return response()->json('Hello World');
     }
 }

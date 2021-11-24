@@ -47,7 +47,7 @@ y nos piden realizar las siguientes tareas para que la API sea capaz de obtener 
 
 ## TAREA T1
 
-La API tiene que ser capaz de recibir una petición POST api/budgets y ser capaz de crear un presupuesto. LA petición será de este tipo:
+La API tiene que ser capaz de recibir una petición POST api/budgets y ser capaz de crear un presupuesto. La petición será de este tipo:
 
 - Array de budgetLine
 
@@ -99,12 +99,3 @@ A su vez, cada budgetLine mostrará:
 - createdAt
 
 **Para esta tarea SÓLO se debe crear Feature tests necesarios para testear la funcionalidad**
-
-## PREGUNTA 2
-
-// reivsar pregunta....
-Imagina que tenemos un listado de actores/actrices con una serie de características/atributos: sexo, edad, altura, idioma, etc.
-
-Negocio nos pide poder elegir a los candidatos que más encajen según una serie de criterios, por ejemplo: "Queremos seleccionar a todas las actrices mayores de 40 años".
-
-Explica el diagrama de clases que deberá tener esta funcionalidad teniendo siempre presente que a lo largo del tiempo se podrán crear y desactivar filtros. **Importante**: no se pide codificar ninguna solución, se pide explicar el diagrama de clases.
