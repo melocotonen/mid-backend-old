@@ -82,6 +82,13 @@ Guardar las lineas de presupuesto y crear el presuesto con los datos rellenos.
 
 ## TAREA T2
 
+La API tiene que ser capaz de obtener los presupuesto uya cantidad total sea mayor a 50 y tengan 2 o más líneas de presupuesto, al recibir una petición de este tipo GET api/budgets&totalAmount=50,budgetLines=2 El resultado que debe devolver la API debe ser el siguiente:
+
+Array de budgets:
+- id
+- total_amount
+- total_budget_lines (Número total de lineas de presupuesto acosciado al budget)
+
 La API tiene que ser capaz de obtener un presupuesto dependiendo del ID de la misma, al recibir una petición de este tipo GET api/budgets/{budgetId}. El resultado que debe devolver la API debe ser el siguiente:
 
 - id
@@ -96,6 +103,6 @@ A su vez, cada budgetLine mostrará:
 - net_mount
 - vat_amount
 - total_amount
-- createdAt
+- created_at
 
 **Para esta tarea SÓLO se debe crear Feature tests necesarios para testear la funcionalidad**
