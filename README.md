@@ -1,16 +1,17 @@
 <img alt="Evalua logo" src="public/logo_e.png"/>
 
 
-# Prueba Back-end
+# Prueba Mid Back-end
 
 ## Instrucciones sobre la realización de la prueba
-Para realizar esta prueba lo primero que debes hacer es descargarte el repositorio. Una vez descargado, debes realizar todas las modificaciones. Finalmente, comprime todo el repositorio (sin la carpeta vendor/) en un archivo zip y envía el fichero zip al e-mail que se te indicaba previamente.
+Para realizar esta prueba lo primero que debes hacer es descargarte el repositorio. Una vez descargado, debes realizar todas las modificaciones. Finalmente comprime todo el repositorio (sin la carpeta vendor/) en un archivo zip y envía este fichero zip al e-mail que se te indica previamente en el correo.
 
-La prueba está formada por una pregunta puramente de programación para poder analizar los conocimientos que tienes sobre arquitectura DDD/Clean Arquitecture.
+La prueba tiene una duración máxima de dos horas y media. Está formada por dos preguntas, la primera de ellas es una pregunta puramente de programación para analizar los conocimientos que tienes sobre arquitectura DDD/Clean Arquitecture. La segunda pregunta está orientada a saber cómo estructurar a nivel de clases cierta funcionalidad.
 
 Se ha creado un endpoint de prueba **/api/helloworld** para tener unas pautas. Más información en el fichero **routes/api.php**
 
 ## PREGUNTA 1
+
 
 El repositorio tiene un proyecto Laravel 8 prácticamente limpio. Las únicas modificaciones que se han realizado son las siguientes:
 
@@ -42,18 +43,68 @@ budget_lines
 - update_at - timestamp
 - deleted_at - timestamp
 
-y nos piden realizar la siguiente tarea para que la API sea capaz de obtener y crear un presupuesto.
+y nos piden realizar las siguientes tareas para que la API sea capaz de obtener y crear un presupuesto.
 
-TAREA T1
+## TAREA T1
 
 La API tiene que ser capaz de recibir una petición POST api/budgets y ser capaz de crear un presupuesto. LA petición será de este tipo:
 
-...
+- Array de budgetLine
 
-El importe del IVA (vatAmount) se calcula: (netAmount * vat) / 100.
+Cada budgetLine a su vez recibirá estos datos:
 
-La cantidad total de una línea de presupuesto se calcula a partir de la suma de la cantidad neta (netAmount) y el importe del IVA (vatAmount).
+- net_amount (decimal, requerido)
+- vat (decimal, requerido)
+
+```
+[
+	{
+		"net_amount": 1,
+		"vat": 1,
+	},
+	...
+]
+```
+
+### Validación
+Validar que los datos recibidos y que el valor del campo vat esté entre 0 - 100, si no pasa la validación se devolverá un mensaje de error.
+
+### Creación y calculo del presupuesto
+El importe del IVA (vat_amount) se calcula: (net_amount * vat) / 100.
+
+La cantidad total de una línea de presupuesto se calcula a partir de la suma de la cantidad neta (net_amount) y el importe del IVA (vat_amount).
 
 La cantidad total de un presupuesto será la suma de las cantidades totales de todas las líneas del presupuesto.
 
+Guardar las lineas de presupuesto y crear el presuesto con los datos rellenos.
+
 **Se debe crear todos los Unit, Feature tests necesarios para testear la funcionalidad**
+
+## TAREA T2
+
+La API tiene que ser capaz de obtener un presupuesto dependiendo del ID de la misma, al recibir una petición de este tipo GET api/budgets/{budgetId}. El resultado que debe devolver la API debe ser el siguiente:
+
+- id
+- Array de budgetLine
+- total_amount
+- created_at
+
+A su vez, cada budgetLine mostrará:
+
+- id
+- vat
+- net_mount
+- vat_amount
+- total_amount
+- createdAt
+
+**Para esta tarea SÓLO se debe crear Feature tests necesarios para testear la funcionalidad**
+
+## PREGUNTA 2
+
+// reivsar pregunta....
+Imagina que tenemos un listado de actores/actrices con una serie de características/atributos: sexo, edad, altura, idioma, etc.
+
+Negocio nos pide poder elegir a los candidatos que más encajen según una serie de criterios, por ejemplo: "Queremos seleccionar a todas las actrices mayores de 40 años".
+
+Explica el diagrama de clases que deberá tener esta funcionalidad teniendo siempre presente que a lo largo del tiempo se podrán crear y desactivar filtros. **Importante**: no se pide codificar ninguna solución, se pide explicar el diagrama de clases.
