@@ -6,7 +6,7 @@
 ## Instrucciones sobre la realización de la prueba
 Para realizar esta prueba lo primero que debes hacer es descargarte el repositorio. Una vez descargado, debes realizar todas las modificaciones. Finalmente comprime todo el repositorio (sin la carpeta vendor/) en un archivo zip y envía este fichero zip al e-mail que se te indica previamente en el correo.
 
-La prueba tiene una duración máxima de dos horas y media. Está formada por dos preguntas, la primera de ellas es una pregunta puramente de programación para analizar los conocimientos que tienes sobre arquitectura DDD/Clean Arquitecture. La segunda pregunta está orientada a saber cómo estructurar a nivel de clases cierta funcionalidad.
+La prueba tiene una duración máxima de dos horas y media, está formada por dos preguntas para saber cómo estructurar a nivel de clases la funcionalidad requerida.
 
 Se ha creado un endpoint de prueba **/api/helloworld** para tener unas pautas. Más información en el fichero **routes/api.php**
 
