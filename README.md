@@ -6,8 +6,6 @@
 ## Instrucciones sobre la realización de la prueba
 Para realizar esta prueba lo primero que debes hacer es descargarte el repositorio. Una vez descargado, debes realizar todas las modificaciones. Finalmente comprime todo el repositorio (sin la carpeta vendor/) en un archivo zip y envía este fichero zip al e-mail que se te indica previamente en el correo.
 
-La prueba tiene una duración máxima de dos horas y media, está formada por dos preguntas para saber cómo estructurar a nivel de clases la funcionalidad requerida.
-
 Se ha creado un endpoint de prueba **/api/helloworld** para tener unas pautas. Más información en el fichero **routes/api.php**
 
 ## PREGUNTA 1
@@ -82,19 +80,18 @@ Guardar las lineas de presupuesto y crear el presuesto con los datos rellenos.
 
 ## TAREA T2
 
-La API tiene que ser capaz de obtener los presupuesto uya cantidad total sea mayor a 50 y tengan 2 o más líneas de presupuesto, al recibir una petición de este tipo GET api/budgets&totalAmount=50,budgetLines=2 El resultado que debe devolver la API debe ser el siguiente:
+La API tiene que ser capaz de obtener los presupuestos cuya cantidad total sea mayor a 50 al recibir una petición de este tipo:
+
+GET api/budgets?totalAmount=50
+
+El resultado a devolver por parte de la API debe ser el siguiente:
 
 Array de budgets:
 - id
 - total_amount
-- total_budget_lines (Número total de lineas de presupuesto acosciado al budget)
-
-La API tiene que ser capaz de obtener un presupuesto dependiendo del ID de la misma, al recibir una petición de este tipo GET api/budgets/{budgetId}. El resultado que debe devolver la API debe ser el siguiente:
-
-- id
-- Array de budgetLine
-- total_amount
+- Array de budgetLines
 - created_at
+- updated_at
 
 A su vez, cada budgetLine mostrará:
 
@@ -104,5 +101,10 @@ A su vez, cada budgetLine mostrará:
 - vat_amount
 - total_amount
 - created_at
+- updated_at
 
 **Para esta tarea SÓLO se debe crear Feature tests necesarios para testear la funcionalidad**
+
+```
+El objetivo principal de la prueba no es completarla, evaluaremos sobre todo la calidad del código con la que se ha desarrollado.
+```
