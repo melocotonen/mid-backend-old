@@ -105,6 +105,11 @@ A su vez, cada budgetLine mostrará:
 
 **Para esta tarea SÓLO se debe crear Feature tests necesarios para testear la funcionalidad**
 
+
+## IMPORTANTE
+
+
 ```
-El objetivo principal de la prueba no es completarla, evaluaremos sobre todo la calidad del código desarrollado.
+El objetivo principal de la prueba no es completarla,
+evaluaremos sobre todo la calidad del código desarrollado.
 ```
