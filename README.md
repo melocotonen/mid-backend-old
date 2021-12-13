@@ -4,7 +4,7 @@
 # Prueba Mid Back-end
 
 ## Instrucciones sobre la realización de la prueba
-Para realizar esta prueba lo primero que debes hacer es descargarte el repositorio. Una vez descargado, debes realizar todas las modificaciones. Finalmente comprime todo el repositorio (sin la carpeta vendor/) en un archivo zip y envía este fichero zip al e-mail que se te indica previamente en el correo.
+Para realizar esta prueba lo primero que debes hacer es descargarte el repositorio. Una vez descargado, debes realizar todas las modificaciones. Finalmente comprime todo el repositorio (sin la carpeta vendor/) en un archivo zip y envía este fichero zip al e-mail candidato.back@e-valua.es
 
 Se ha creado un endpoint de prueba **/api/helloworld** para tener unas pautas. Más información en el fichero **routes/api.php**
 
