@@ -111,5 +111,5 @@ A su vez, cada budgetLine mostrará:
 
 ```
 El objetivo principal de la prueba no es completarla,
-evaluaremos sobre todo la calidad del código desarrollado.
+evaluaremos sobre todo la calidad y estructura del código desarrollado.
 ```
