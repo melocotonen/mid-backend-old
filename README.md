@@ -1,5 +1,3 @@
-<img alt="Evalua logo" src="public/logo_e.png"/>
-
 
 # Prueba Mid Back-end
 
